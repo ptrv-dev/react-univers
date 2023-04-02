@@ -1,14 +1,4 @@
 .header {
-  position: absolute;
-  z-index: 999;
-  left: 0;
-  top: 15px;
-  width: 100%;
-  padding: 20px 0;
-  &__container {
-    display: flex;
-    align-items: center;
-  }
   &__variant {
     margin: 0 25px;
     ul {
@@ -34,7 +24,6 @@
         &:hover {
           cursor: pointer;
           background-color: rgba(#9fe870, 0.2);
-          // color: #000000;
         }
       }
     }

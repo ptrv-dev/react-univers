@@ -1,0 +1,15 @@
+.logo {
+  text-decoration: none;
+  color: #ffffff;
+  display: inline-flex;
+  flex-shrink: 0;
+  gap: 6px;
+  align-items: center;
+  &__image {
+  }
+  &__heading {
+    font-family: 'Clash Display';
+    font-weight: 600;
+    font-size: 19px;
+  }
+}
