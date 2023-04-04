@@ -1,0 +1,24 @@
+.button {
+  display: inline-flex;
+  justify-content: center;
+  background: none;
+  border: none;
+  &_lg {
+    background-color: #9fe870;
+    padding: 10px 40px;
+    border-radius: 30px;
+    font-family: 'Clash Display';
+    font-size: 36px;
+    font-weight: 600;
+    color: #000000;
+    border: none;
+  }
+  &_circle {
+    background: #1e1c1c;
+    color: #ffffff;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    align-items: center;
+  }
+}
