@@ -4,7 +4,7 @@ import style from './Button.module.scss';
 
 interface ButtonProps {
   children: any;
-  variant?: 'default' | 'large' | 'circle';
+  variant?: 'default' | 'large' | 'circle' | 'outlined';
   className?: string;
 }
 
@@ -16,6 +16,7 @@ const Button: React.FC<ButtonProps> = ({
   const classes = [style['button']];
   if (variant === 'large') classes.push(style['button_lg']);
   else if (variant === 'circle') classes.push(style['button_circle']);
+  else if (variant === 'outlined') classes.push(style['button_outlined']);
   if (className) classes.push(className);
   return <button className={classes.join(' ')}>{children}</button>;
 };
