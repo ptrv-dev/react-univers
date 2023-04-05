@@ -2,6 +2,7 @@ import React from 'react';
 import AboutSection from './components/AboutSection';
 import AdvantagesSection from './components/AdvantagesSection';
 import CardSection from './components/CardSection';
+import ControlSection from './components/ControlSection';
 import DiscoverSection from './components/DiscoverSection';
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -19,6 +20,7 @@ const App: React.FC = () => {
       <CardSection />
       <TransferSection />
       <DiscoverSection />
+      <ControlSection />
       <TryNowSection />
       <Footer />
     </>
