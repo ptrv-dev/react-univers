@@ -1,0 +1,13 @@
+.discover {
+  background-color: #000000;
+  padding-top: 100px;
+  &__body {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    @media screen and (max-width: 1023.98px) {
+      gap: 20px;
+    }
+  }
+}

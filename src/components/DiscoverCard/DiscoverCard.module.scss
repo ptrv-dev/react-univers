@@ -1,0 +1,134 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 48px 24px;
+  background-color: #191c1f;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 580px;
+  transition: background-color 0.3s ease-in-out;
+  justify-content: space-between;
+  &:hover {
+    background-color: #9fe870;
+    .card {
+      &__title {
+        color: #000000;
+      }
+      &__link {
+        color: inherit;
+      }
+    }
+  }
+  @media screen and (max-width: 767.98px) {
+    flex: 0 1 100% !important;
+  }
+  &_sm {
+    flex: 0 1 calc(30% - 20px);
+    @media screen and (max-width: 1100px) {
+      flex: 0 1 calc(35% - 20px);
+    }
+    @media screen and (max-width: 1023.98px) {
+      flex: 0 1 calc(40% - 10px);
+    }
+    @media screen and (max-width: 767.98px) {
+      flex: 0 1 calc(50% - 10px);
+    }
+  }
+  &_md {
+    flex: 0 1 calc(50% - 20px);
+    @media screen and (max-width: 1023.98px) {
+      flex: 0 1 calc(50% - 10px);
+    }
+    .card {
+      &__image {
+        max-height: 300px;
+      }
+    }
+  }
+  &_lg {
+    flex: 0 1 calc(70% - 20px);
+    @media screen and (max-width: 1100px) {
+      flex: 0 1 calc(65% - 20px);
+    }
+    @media screen and (max-width: 1023.98px) {
+      flex: 0 1 calc(60% - 10px);
+    }
+    position: relative;
+    .card {
+      &__image {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
+  &_xl {
+    flex: 0 1 100%;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+    height: auto;
+    @media screen and (max-width: 767.98px) {
+      flex-direction: column;
+    }
+    .card {
+      &__col {
+        margin: 0 24px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 425px;
+        flex: 1;
+        @media screen and (max-width: 767.98px) {
+          max-width: 100%;
+        }
+      }
+      &__title {
+        margin-bottom: 20px;
+      }
+      &__link {
+        margin-top: 40px;
+      }
+      &__image {
+        max-width: 40%;
+        @media screen and (max-width: 767.98px) {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  &__title {
+    font-family: 'Clash Display';
+    font-size: 32px;
+    line-height: 1.25;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 8px;
+    transition: color 0.2s ease-in-out;
+  }
+  &__text {
+    transition: color 0.2s ease-in-out;
+    font-family: 'Roboto';
+    color: #818c96;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1.45;
+  }
+  &__image {
+    align-self: center;
+    display: block;
+    max-width: 100%;
+  }
+  &__link {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 19px;
+    color: #9fe870;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
