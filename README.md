@@ -2,6 +2,7 @@
 # Univers - Digitize your univers bank
 ##### Technologies used:
 - React
+- Framer Motion
 - TypeScript
 - SCSS Modules
 
