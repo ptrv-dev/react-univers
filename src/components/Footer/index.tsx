@@ -1,23 +1,39 @@
+import { motion } from 'framer-motion';
 import React from 'react';
+import { animationData } from '../../data/animationData';
 import Button from '../Button';
 
 import style from './Footer.module.scss';
 
 const Footer: React.FC = () => {
   return (
-    <div className={style['footer']}>
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      className={style['footer']}
+    >
       <div className={style['footer__wrapper']}>
         <div className={[style['footer__container'], 'container'].join(' ')}>
-          <h2 className={style['footer__title']}>
+          <motion.h2
+            variants={animationData.scale}
+            custom={1}
+            className={style['footer__title']}
+          >
             Connect your finance with Carty
-          </h2>
-          <Button variant="large">Join the universe</Button>
-          <p className={style['footer__copyright']}>
+          </motion.h2>
+          <motion.div variants={animationData.scale} custom={2}>
+            <Button variant="large">Join the universe</Button>
+          </motion.div>
+          <motion.p
+            variants={animationData.opacity}
+            custom={3}
+            className={style['footer__copyright']}
+          >
             2023 © All right reserved (Univers™)
-          </p>
+          </motion.p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

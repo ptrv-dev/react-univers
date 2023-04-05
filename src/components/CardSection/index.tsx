@@ -1,21 +1,34 @@
+import { motion } from 'framer-motion';
 import React from 'react';
+import { animationData } from '../../data/animationData';
 import SectionHeader from '../SectionHeader';
 
 import style from './CardSection.module.scss';
 
 const CardSection: React.FC = () => {
   return (
-    <div className={[style['card'], 'section'].join(' ')}>
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      className={[style['card'], 'section'].join(' ')}
+    >
       <div className={style['card__wrapper']}>
         <div className={[style['card__container'], 'container'].join(' ')}>
           <div className={style['card__body']}>
-            <SectionHeader
-              color="white"
-              variant="col"
-              title="Make an impression with metal"
-              subtitle="Get our iconic metal cards forged from stainless steel, for you and your power players.  Add your company name to the front for an extra professional touch. Exclusively for paid plans. Subject to additional fees"
-            />
-            <a href="#" className={style['card__link']}>
+            <motion.div variants={animationData.fromLeft} custom={1}>
+              <SectionHeader
+                color="white"
+                variant="col"
+                title="Make an impression with metal"
+                subtitle="Get our iconic metal cards forged from stainless steel, for you and your power players.  Add your company name to the front for an extra professional touch. Exclusively for paid plans. Subject to additional fees"
+              />
+            </motion.div>
+            <motion.a
+              variants={animationData.opacity}
+              custom={2}
+              href="#"
+              className={style['card__link']}
+            >
               Order a Metal card
               <svg
                 width="27"
@@ -29,11 +42,11 @@ const CardSection: React.FC = () => {
                   fill="currentColor"
                 />
               </svg>
-            </a>
+            </motion.a>
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

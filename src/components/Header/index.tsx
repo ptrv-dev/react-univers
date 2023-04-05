@@ -1,4 +1,6 @@
+import { motion } from 'framer-motion';
 import React from 'react';
+import { animationData } from '../../data/animationData';
 import useWindowSize from '../../hooks/useWindowSize';
 import HeaderNavigation from '../HeaderNavigation';
 import HeaderVariants from '../HeaderVariants';
@@ -19,8 +21,15 @@ const Header: React.FC = () => {
   const [currentVariant, setCurrentVariant] = React.useState<number>(0);
 
   return (
-    <header className={style['header']}>
-      <div className={[style['header__container'], 'container'].join(' ')}>
+    <motion.header
+      initial="hidden"
+      whileInView="visible"
+      className={style['header']}
+    >
+      <motion.div
+        variants={animationData.fromTop}
+        className={[style['header__container'], 'container'].join(' ')}
+      >
         <Logo />
         {width > 500 && (
           <HeaderVariants
@@ -38,8 +47,8 @@ const Header: React.FC = () => {
             />
           )}
         </HeaderNavigation>
-      </div>
-    </header>
+      </motion.div>
+    </motion.header>
   );
 };
 
